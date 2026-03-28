@@ -43,8 +43,8 @@ data/
 │ ├── label.txt<br>
 │ └── *.mat files<br>
 └── test/<br>
-├── label.txt<br>
-└── *.mat files<br>
+  ├── label.txt<br>
+  └── *.mat files<br>
 
 
 Each `.mat` file must contain a variable named:
@@ -74,7 +74,7 @@ relative_path label
 Example:
 
 
-sample1.mat 0
+sample1.mat 0 <br>
 sample2.mat 3
 
 
@@ -85,7 +85,7 @@ sample2.mat 3
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt 
 Usage
 Train the proposed MoE model
 python main.py --model_name SpatioTemporalTrueMoE --dataset_name LaboDAS
