@@ -2,7 +2,7 @@
 
 This repository contains the implementation of the models and experiments described in the anonymous submission to ICANN 2026.
 
-The proposed framework focuses on spatio-temporal representation learning for Distributed Acoustic Sensing (DAS) data using convolutional and transformer-based architectures, including a Mixture-of-Experts (MoE) model.
+The proposed framework focuses on spatio-temporal representation learning for Distributed Acoustic Sensing (DAS) data using transformer-based architectures, including a Mixture-of-Experts (MoE) model: DASTMoE
 
 ---
 
