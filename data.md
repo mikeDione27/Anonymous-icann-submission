@@ -11,6 +11,8 @@ Below are the links and references to access each dataset.
 
 This dataset is widely used for benchmarking DAS-based event classification.
 
+![Architecture](images/labo_scenario.png)
+
 ### Description
 - 6 classes:
   - background
