@@ -1,4 +1,4 @@
-# Anonymous ICANN 2026 Submission Repository
+# DASTMoE: A Spatio-Temporal Mixture-of-Experts Model for Distributed Acoustic Sensing
 
 This repository contains the implementation of the models and experiments described in the anonymous submission to ICANN 2026.
 
@@ -8,11 +8,11 @@ The proposed framework focuses on spatio-temporal representation learning for Di
 
 ## Repository Structure
 .<br>
-├── main.py # Training and evaluation script<br>
-├── models.py # Model architectures<br>
-├── utils.py # Dataset loading, training utilities, evaluation, plotting<br>
-├── requirements.txt # Dependencies<br>
-├── data/ # Expected dataset structure (view cited paper)<br>
+├── main.py <br>
+├── models.py <br>
+├── utils.py <br>
+├── requirements.txt <br>
+├── data/ <br>
 └── Results
 
 
@@ -88,7 +88,7 @@ Install dependencies:
 pip install -r requirements.txt 
 Usage
 Train the proposed MoE model
-python main.py --model_name SpatioTemporalTrueMoE --dataset_name LaboDAS
+python main.py --model_name DASTMoE --dataset_name LaboDAS (ex: Laboratory dataset)
 Train baseline models
 python main.py --model_name CNNOnly --dataset_name LaboDAS
 python main.py --model_name CNN1Transformer --dataset_name LaboDAS
@@ -98,34 +98,8 @@ Hidden dimension: 128
 Batch size: 32
 Learning rate: 1e-4
 Optimizer: Adam
-Outputs
 
-All outputs are saved in:
 
-outputs/
-
-Including:
-
-Trained model (.pth)
-Training curves
-Confusion matrix
-Feature embeddings
-Training history (.csv, .npy)
-MoE gating statistics (if applicable)
-Key Features
-Spatio-temporal modeling of DAS signals
-Transformer-based expert networks
-Cross-attention fusion mechanism
-Adaptive expert selection via gating
-Load balancing regularization
-End-to-end training and evaluation pipeline
-Notes
-The dataset is not included to ensure anonymity.
-GPU is automatically used if available.
-Paths and hyperparameters can be configured via command-line arguments.
-Anonymity Statement
-
-All identifying information has been removed to ensure a double-blind review process.
 
 Reproducibility
 
