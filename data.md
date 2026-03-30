@@ -18,7 +18,9 @@ This dataset is widely used for benchmarking DAS-based event classification.
 ### Description
 
 <div align="center">
+
 ![Field scenarios of six typical events](images/labo_scenario.png)
+
 </div>
 
 - 6 classes:
