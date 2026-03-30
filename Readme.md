@@ -34,9 +34,7 @@ The repository includes the following models:
 ---
 
 
-# Dataset Description
-
-This repository relies on three datasets used for evaluating the proposed models.  
+# Dataset Description  
 
 
 Below are the links, description and references to access each dataset.
