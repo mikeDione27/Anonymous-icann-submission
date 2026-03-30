@@ -1,5 +1,5 @@
 
-<div align="center">
+
 # Dataset Description
 
 This repository relies on three datasets used for evaluating the proposed models.  
@@ -17,7 +17,9 @@ This dataset is widely used for benchmarking DAS-based event classification.
 
 ### Description
 
+<div align="center">
 ![Field scenarios of six typical events](images/labo_scenario.png)
+</div>
 
 - 6 classes:
   - (a) background
@@ -28,8 +30,11 @@ This dataset is widely used for benchmarking DAS-based event classification.
   - (f) walking
 
 
+
 - Train/test spliting :
   
+ <div align="center">
+
 | Event      | Number | Label | Train | Test |
 |------------|--------|-------|-------|------|
 | Background | 3094   | 0     | 2505  | 589  |
@@ -39,6 +44,8 @@ This dataset is widely used for benchmarking DAS-based event classification.
 | Shaking    | 2728   | 4     | 2183  | 545  |
 | Walking    | 2450   | 5     | 1969  | 481  |
 | **Total**  | **15612** | -- | **12553** | **3059** |
+
+</div>
 
 ### Access
 The dataset is publicly available and can typically be accessed via the original publication or associated repositories.
@@ -57,7 +64,11 @@ This dataset is used for geophysical monitoring tasks.
 
 ### Description
 
+<div align="center">
+
 ![Geophysical dataset](images/DAS_rockfall.png)
+
+</div>
 
 - DAS signals recorded for rock slope failure detection
 - Multi-class classification depending on setup
@@ -69,6 +80,8 @@ This dataset is used for geophysical monitoring tasks.
  - Narrow-band noise
   
 - Train/test splitting :
+- 
+<div align="center">
 
 | Event             | Number | Label | Train | Test |
 |-------------------|--------|-------|-------|------|
@@ -76,6 +89,8 @@ This dataset is used for geophysical monitoring tasks.
 | Slope failure     | 384    | 1     | 307   | 77   |
 | Narrow-band noise | 191    | 2     | 153   | 38   |
 | **Total**         | **1367** | --  | **1093** | **274** |
+
+</div>
 
 ### Access
 
@@ -103,7 +118,11 @@ The dataset is available through the following repository:
 
 This dataset corresponds to a more realistic deployment scenario with environmental variability.
 
+<div align="center">
+
 ![Urban dataset](images/Das_university.png)
+
+</div>
 
 ### Description
 - Real-world DAS acquisition
@@ -112,6 +131,8 @@ This dataset corresponds to a more realistic deployment scenario with environmen
 
 
 - Train/test splitting
+
+<div align="center">
 
 | Event         | Number | Label | Train | Test |
 |---------------|--------|-------|-------|------|
@@ -125,6 +146,7 @@ This dataset corresponds to a more realistic deployment scenario with environmen
 | Running       | 533    | 7     | 373   | 107  |
 | Walking       | 1468   | 8     | 1031  | 294  |
 | **Total**     | **7277** | --  | **5093** | **1456** |
+</div>
 
 ### Access
 
@@ -139,5 +161,4 @@ The dataset is available through the following repository:
 - https://doi.org/10.6084/m9.figshare.27004732
 
   
-</div>
 
