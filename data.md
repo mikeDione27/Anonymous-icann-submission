@@ -82,7 +82,7 @@ This dataset is used for geophysical monitoring tasks.
  - Narrow-band noise
   
 - Train/test splitting :
-- 
+
 <div align="center">
 
 | Event             | Number | Label | Train | Test |
@@ -109,8 +109,7 @@ The dataset is available through the following repository:
     Kang, J., et al. (2024).
     *Automatic monitoring of rock‐slope failures using Distributed Acoustic Sensing and semi‐supervised learning*
     Geophysical Research Letters, 51,
-    e2024GL110672. https://doi.org/10.1029/
-    2024GL110672
+    e2024GL110672. https://doi.org/10.1029/2024GL110672
 
 
 

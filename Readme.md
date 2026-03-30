@@ -12,7 +12,7 @@ The proposed framework focuses on spatio-temporal representation learning for Di
 ├── models.py <br>
 ├── utils.py <br>
 ├── requirements.txt <br>
-├── data/ <br>
+├── data.md <br>
 └── Results
 
 
@@ -33,75 +33,167 @@ The repository includes the following models:
 
 ---
 
-## Dataset Format
 
-The dataset (Laboratory dataset) must be structured as follows:
+# Dataset Description
 
-data/
-<br>
-├── train/ <br>
-│ ├── label.txt<br>
-│ └── *.mat files<br>
-└── test/<br>
-  ├── label.txt<br>
-  └── *.mat files<br>
+This repository relies on three datasets used for evaluating the proposed models.  
 
 
-Each `.mat` file must contain a variable named:
-
-data 
-
-with shape:
-
-
-(T, N)
-
-
-Where:
-- `T`: temporal dimension (e.g., 10000)
-- `N`: number of DAS channels (e.g., 12)
+Below are the links, description and references to access each dataset.
 
 ---
 
-## Label File Format
+## 1. φ-OTDR Laboratory Dataset
 
-Each `label.txt` file must contain lines formatted as:
-
-
-relative_path label
+This dataset is widely used for benchmarking DAS-based event classification.
 
 
-Example:
+
+### Description
+
+<div align="center">
+
+![Field scenarios of six typical events](images/labo_scenario.png)
+
+</div>
+
+- 6 classes:
+  - (a) background
+  - (b) digging
+  - (c) knocking
+  - (d) watering
+  - (e) shaking
+  - (f) walking
 
 
-sample1.mat 0 <br>
-sample2.mat 3
 
+- Train/test spliting :
+  
+ <div align="center">
+
+| Event      | Number | Label | Train | Test |
+|------------|--------|-------|-------|------|
+| Background | 3094   | 0     | 2505  | 589  |
+| Digging    | 2512   | 1     | 2018  | 494  |
+| Knocking   | 2530   | 2     | 2025  | 505  |
+| Watering   | 2298   | 3     | 1853  | 445  |
+| Shaking    | 2728   | 4     | 2183  | 545  |
+| Walking    | 2450   | 5     | 1969  | 481  |
+| **Total**  | **15612** | -- | **12553** | **3059** |
+
+</div>
+
+### Access
+The dataset is publicly available and can typically be accessed via the original publication or associated repositories.
+
+### Reference
+
+- Cao, X., et al.  
+  *An open dataset of φ-OTDR events with two classification models as baselines*  
+  IEEE Sensors Journal
 
 ---
 
-## Installation
+## 2. Geophysical DAS Dataset (Rock Slope Failure Monitoring)
 
-Install dependencies:
+This dataset is used for geophysical monitoring tasks.
 
-```bash
-pip install -r requirements.txt 
-Usage
-Train the proposed MoE model
-python main.py --model_name DASTMoE --dataset_name LaboDAS (ex: Laboratory dataset)
-Train baseline models
-python main.py --model_name CNNOnly --dataset_name LaboDAS
-python main.py --model_name CNN1Transformer --dataset_name LaboDAS
-Default Configuration
-Input shape: (T, N) = (10000, 12)
-Hidden dimension: 128
-Batch size: 32
-Learning rate: 1e-4
-Optimizer: Adam
+### Description
+
+<div align="center">
+
+![Geophysical dataset](images/DAS_rockfall.png)
+
+</div>
+
+- DAS signals recorded for rock slope failure detection
+- Multi-class classification depending on setup
+- High spatial resolution along fiber
+
+- 3 classes:
+ - Vehicle noise 
+ - Slope failure
+ - Narrow-band noise
+  
+- Train/test splitting :
+
+<div align="center">
+
+| Event             | Number | Label | Train | Test |
+|-------------------|--------|-------|-------|------|
+| Vehicle noise     | 792    | 0     | 633   | 159  |
+| Slope failure     | 384    | 1     | 307   | 77   |
+| Narrow-band noise | 191    | 2     | 153   | 38   |
+| **Total**         | **1367** | --  | **1093** | **274** |
+
+</div>
+
+### Access
+
+The dataset is available through the following repository:
+
+- https://www.envidat.ch/#/metadata/distributed-acoustic-sensing-brienz
+
+(Search for the dataset associated with the reference below)
+
+### Reference
+
+- Jiahui Kang et al. 
+
+    Kang, J., et al. (2024).
+    *Automatic monitoring of rock‐slope failures using Distributed Acoustic Sensing and semi‐supervised learning*
+    Geophysical Research Letters, 51,
+    e2024GL110672. https://doi.org/10.1029/2024GL110672
 
 
 
-Reproducibility
 
-The repository is self-contained and allows full reproducibility given access to the dataset.
+---
+## 3. Real-world DAS Dataset (Infrastructure Monitoring Scenario)
+
+This dataset corresponds to a more realistic deployment scenario with environmental variability.
+
+<div align="center">
+
+![Urban dataset](images/Das_university.png)
+
+</div>
+
+### Description
+- Real-world DAS acquisition
+- Multiple event types under varying conditions
+- Used to evaluate robustness and generalization
+
+
+- Train/test splitting
+
+<div align="center">
+
+| Event         | Number | Label | Train | Test |
+|---------------|--------|-------|-------|------|
+| Car           | 1085   | 0     | 757   | 217  |
+| Construction  | 825    | 1     | 576   | 165  |
+| Fence         | 326    | 2     | 228   | 65   |
+| Longboard     | 609    | 3     | 426   | 122  |
+| Manipulation  | 527    | 4     | 369   | 105  |
+| Open/Close    | 124    | 5     | 87    | 25   |
+| Regular       | 1780   | 6     | 1246  | 356  |
+| Running       | 533    | 7     | 373   | 107  |
+| Walking       | 1468   | 8     | 1031  | 294  |
+| **Total**     | **7277** | --  | **5093** | **1456** |
+</div>
+
+### Access
+
+The dataset is available through the following repository:
+
+- https://doi.org/10.6084/m9.figshare.27004732
+
+### Reference
+
+- Adrian Tomasov et al.
+*Comprehensive Dataset for Event Classification Using Distributed Acoustic Sensing (DAS) Systems*
+- https://doi.org/10.6084/m9.figshare.27004732
+
+  
 
