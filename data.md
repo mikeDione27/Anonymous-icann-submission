@@ -101,7 +101,7 @@ The dataset is available through the following repository:
 
 This dataset corresponds to a more realistic deployment scenario with environmental variability.
 
-![Urban dataset](images/DAS_university.png)
+![Urban dataset](images/Das_university.png)
 
 ### Description
 - Real-world DAS acquisition
