@@ -169,8 +169,8 @@ https://doi.org/10.6084/m9.figshare.27004732
 
 ---
 
-## Anonymity Statement
+This code accompanies a paper accepted at ICANN 2026
 
-All identifying information has been removed to ensure a double-blind review process.
+
 
 ---
