@@ -167,10 +167,6 @@ https://doi.org/10.6084/m9.figshare.27004732
 - GPU is automatically used if available  
 - Paths can be configured via command-line arguments  
 
----
-
 This code accompanies a paper accepted at ICANN 2026
 
 
-
----
